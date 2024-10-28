@@ -1,0 +1,203 @@
+#slide3 {
+    background-image: url(../assets/bg-3.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    top: 200vh;
+}
+
+#slide3 .kcb-logo {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+#slide3 .kcb-logo img {
+    max-width: 20vw;
+}
+
+#slide3 .rate-hero, #slide3 .text-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#slide3 .rate-hero img {
+    height: 50vh;
+}
+
+#slide3 .text-hero img {
+    height: 60%;
+}
+
+#slide3 .footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#slide3 .footer img[alt="bottom-left"] {
+    align-self: flex-start;
+}
+
+#slide3 .footer img[alt="tag"] {
+    align-self: flex-end;
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+    #slide3 .kcb-logo img {
+        max-width: 23vw;
+    }
+    
+    #slide3 .rate-hero img {
+        height: 42vh;
+    }
+
+    #slide3 .text-hero img {
+        height: 45%;
+    }
+
+    #slide3 .footer {
+        bottom: 5px;
+    }
+
+    #slide3 .footer img[alt="bottom-left"] {
+        width: 25vw;
+    }
+
+    #slide3 .footer img[alt="tag"] {
+        width: 15vw;
+    }
+}
+
+@media (max-width: 992px) {
+    #slide3 {
+        padding: 5%;
+    }
+    
+    #slide3 .kcb-logo img {
+        max-width: 26vw;
+    }
+
+    #slide3 .rate-hero {
+        top: -10%;
+    }
+
+    #slide3 .rate-hero img {
+        height: 35vh;
+    }
+
+    #slide3 .text-hero {
+        bottom: 13%;
+    }
+
+    #slide3 .text-hero img {
+        height: 20vh;
+
+    }
+
+    #slide3 .footer {
+        bottom: -25px;
+        padding: 7%;
+    }
+
+    #slide3 .footer img[alt="bottom-left"] {
+        width: 33vw;
+    }
+
+    #slide3 .footer img[alt="tag"] {
+        width: 23vw;
+        left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    #slide3 {
+        padding: 5%;
+    }
+    
+    #slide3 .kcb-logo img {
+        max-width: 30vw;
+    }
+
+    #slide3 .rate-hero {
+        top: -10%;
+    }
+
+    #slide3 .rate-hero img {
+        height: 35vh;
+    }
+
+    #slide3 .text-hero {
+        bottom: 13%;
+    }
+
+    #slide3 .text-hero img {
+        height: 20vh;
+    }
+
+    #slide3 .footer {
+        bottom: 10px;
+        padding: 7%;
+        right: 2%;
+    }
+
+    #slide3 .footer img[alt="bottom-left"] {
+        width: 33vw;
+    }
+
+    #slide3 .footer img[alt="tag"] {
+        width: 23vw;
+        left: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    #slide3 {
+        padding: 5%;
+    }
+    
+    #slide3 .kcb-logo img {
+        max-width: 25vw;
+    }
+
+    #slide3 .rate-hero {
+        top: -10%;
+    }
+
+    #slide3 .rate-hero img {
+        height: 30vh;
+    }
+
+    #slide3 .text-hero {
+        bottom: 16%;
+    }
+
+    #slide3 .text-hero img {
+        height: 15vh;
+    }
+
+    #slide3 .footer {
+        bottom: 10px;
+        padding: 7%;
+        right: 2%;
+    }
+
+    #slide3 .footer img[alt="bottom-left"] {
+        width: 30vw;
+    }
+
+    #slide3 .footer img[alt="tag"] {
+        width: 20vw;
+        left: 10%;
+    }
+}
