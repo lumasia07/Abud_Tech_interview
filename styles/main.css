@@ -1,43 +1,3 @@
-.slide {
-    display: none;
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    padding: 20px;
-    box-sizing: border-box;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-}
-
-.slide.active {
-    display: flex;
-}
-
-.navigation {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-}
-
-.slide-indicator {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ddd;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.slide-indicator.active {
-    background: #333;
-}
-
-/* Reset default margin, padding, and box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -46,25 +6,64 @@
 
 body {
     font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#presentation {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: flex;
+    opacity: 1;
+}
+
+.slide-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide-indicator.active {
+    background: #ffffff;
 }
 
 @media (max-width: 1200px) {
     .slide {
-        width: 80%;
-        left: 10%;
-        height: 90vh;
-        top: 6%;
+        padding: 15px;
     }
 }
 
 @media (max-width: 992px) {
     .slide {
-        width: 90%;
-        height: 90vh;
-        top: 10%;
-        left: 5%;
-        padding: 15px;
+        padding: 12px;
     }
+    
     .slide-indicator {
         width: 8px;
         height: 8px;
@@ -74,15 +73,13 @@ body {
 
 @media (max-width: 768px) {
     .slide {
-        width: 95%;
-        height: 80vh;
-        top: 10%;
-        left: 2.5%;
         padding: 10px;
     }
+    
     .navigation {
         bottom: 15px;
     }
+    
     .slide-indicator {
         width: 6px;
         height: 6px;
@@ -92,13 +89,13 @@ body {
 
 @media (max-width: 576px) {
     .slide {
-        width: 100%;
-        height: 70vh;
-        margin: 5px;
+        padding: 8px;
     }
+    
     .navigation {
         bottom: 10px;
     }
+    
     .slide-indicator {
         width: 5px;
         height: 5px;

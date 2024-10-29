@@ -28,33 +28,48 @@
 
 .rates ul li {
     list-style-type: none;
-}
-
-.rates ul li img {
-    width: 80px;
-    height: auto;
-    transition: transform 0.3s;
-}
-
-.seven-pointer {
-    display: flex;
-    flex-direction: column;
-}
-
-#pointer {
     position: relative;
-    left: 53%;
-    top: -20px;
-    transform: translateX(-50%);
-    pointer-events: none;
 }
 
-.rates ul li img:hover {
-    background-color: whitesmoke;
+.number-wrapper {
+    position: relative;
+    padding: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.number-wrapper:hover {
+    background-color: rgba(245, 245, 245, 0.2);
     cursor: pointer;
 }
 
-/* Large screens */
+.rates ul li .number-img {
+    width: 80px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.seven-container {
+    position: relative;
+}
+
+.seven-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#pointer {
+    position: absolute;
+    top: 30%; 
+    transform: translateY(5px);
+    pointer-events: none;
+    z-index: 0;
+}
+
 @media (max-width: 1200px) {
     .rates {
         width: 90%;
@@ -64,12 +79,12 @@
         gap: 40px;
     }
 
-    .rates ul li img {
+    .rates ul li .number-img {
         width: 70px;
     }
 
-    #pointer {
-        left: 52%;
+    .number-wrapper {
+        padding: 6px;
     }
 }
 
@@ -88,13 +103,12 @@
         gap: 30px;
     }
 
-    .rates ul li img {
+    .rates ul li .number-img {
         width: 65px;
     }
 
-    #pointer {
-        left: 51%;
-        top: -15px;
+    .number-wrapper {
+        padding: 5px;
     }
 }
 
@@ -113,13 +127,12 @@
         flex-wrap: wrap;
     }
 
-    .rates ul li img {
+    .rates ul li .number-img {
         width: 60px;
     }
 
-    #pointer {
-        left: 50%;
-        top: -12px;
+    .number-wrapper {
+        padding: 4px;
     }
 }
 
@@ -138,13 +151,11 @@
         gap: 15px;
     }
 
-    .rates ul li img {
+    .rates ul li .number-img {
         width: 50px;
     }
 
-    #pointer {
-        left: 50%;
-        top: -10px;
-        transform: translateX(-50%) scale(0.8);
+    .number-wrapper {
+        padding: 3px;
     }
 }
